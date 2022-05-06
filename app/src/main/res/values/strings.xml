@@ -1,0 +1,70 @@
+<resources>
+    <string name="app_name">SimpleCruise</string>
+    <string name="username">Felhasználónév</string>
+    <string name="password">Jelszó</string>
+    <string name="login">Belépés</string>
+    <string name="registration">Regisztráció</string>
+    <string name="email">E-mail</string>
+    <string name="passwordConfirm">Jelszó megerősítése</string>
+    <string name="cancel">Mégse</string>
+    <string name="guest">Vendég</string>
+    <string name="googleAccount">Google fiók</string>
+    <string name="start">Indulás:</string>
+    <string name="book">Foglalás</string>
+    <string name="end">Érkezés:</string>
+    <string name="date">Dátum:</string>
+    <string name="placeholder_placeTime">Helyszín-idő</string>
+    <string name="placeholder_date">1900.01.01.</string>
+
+    <string-array name="cruise_item_starts">
+        <item>Balatonfüred | 10:00</item>
+        <item>Balatonfüred | 15:00</item>
+        <item>Tihany | 11:30</item>
+        <item>Tihany | 14:45</item>
+        <item>Balatonlelle | 14:20</item>
+        <item>Balatonlelle | 18:15</item>
+        <item>Margitsziget | 11:00</item>
+        <item>Margitsziget | 16:10</item>
+        <item>Badacsony | 9:40</item>
+        <item>Badacsony | 17:10</item>
+    </string-array>
+
+    <string-array name="cruise_item_ends">
+        <item>Badacsony | 12:00</item>
+        <item>Badacsony | 17:00</item>
+        <item>Balatonlelle | 13:30</item>
+        <item>Balatonlelle | 16:45</item>
+        <item>Balatonlelle | 16:20</item>
+        <item>Balatonlelle | 20:15</item>
+        <item>Dokk 11. | 13:00</item>
+        <item>Dokk 11. | 18:10</item>
+        <item>Keszthely | 11:40</item>
+        <item>Keszthely | 19:10</item>
+    </string-array>
+
+    <string-array name="cruise_item_dates">
+        <item>2022.05.20.</item>
+        <item>2022.05.21.</item>
+        <item>2022.06.01.</item>
+        <item>2022.06.01.</item>
+        <item>2022.06.08.</item>
+        <item>2022.06.10.</item>
+        <item>2022.06.22.</item>
+        <item>2022.06.25.</item>
+        <item>2022.07.17.</item>
+        <item>2022.07.17.</item>
+    </string-array>
+
+    <array name="cruise_item_images">
+        <item>@drawable/balaton0</item>
+        <item>@drawable/balaton0</item>
+        <item>@drawable/balaton1</item>
+        <item>@drawable/balaton1</item>
+        <item>@drawable/balaton2</item>
+        <item>@drawable/balaton2</item>
+        <item>@drawable/budapest</item>
+        <item>@drawable/budapest</item>
+        <item>@drawable/balaton3</item>
+        <item>@drawable/balaton3</item>
+    </array>
+</resources>

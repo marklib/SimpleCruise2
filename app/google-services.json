@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1075926570030",
+    "project_id": "simple-cruise",
+    "storage_bucket": "simple-cruise.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1075926570030:android:20745108b56c0402ccfbbf",
+        "android_client_info": {
+          "package_name": "com.example.simplecruise"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1075926570030-0aaeq6ijuniuqjp9v0020du9bbj9re8e.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.simplecruise",
+            "certificate_hash": "7fae024d7f36a43425b3a57c586c76be81d589b3"
+          }
+        },
+        {
+          "client_id": "1075926570030-g50t963ngddh4tco7r7eb7g9ai5v0v2i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAAumci-tds6bPF7NrrqwmSvmb9Huc4lQ8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1075926570030-g50t963ngddh4tco7r7eb7g9ai5v0v2i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

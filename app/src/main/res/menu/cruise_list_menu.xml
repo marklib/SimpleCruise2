@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/bookings"
+        android:title="Foglalások"
+        app:actionViewClass="android.widget.SearchView"
+        app:showAsAction="always"
+        />
+    <item
+        android:id="@+id/search_bar"
+        android:title="Keresés"
+        android:icon="@drawable/icon_search"
+        app:actionViewClass="android.widget.SearchView"
+        app:showAsAction="always"
+        />
+    <item
+        android:id="@+id/log_out"
+        android:title="Kijelentkezés"
+        app:actionViewClass="android.widget.SearchView"
+        app:showAsAction="never"
+        />
+
+</menu>
