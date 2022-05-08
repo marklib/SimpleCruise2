@@ -51,6 +51,10 @@ public class RegistrationActivity extends AppCompatActivity {
     }
 
     public void register(View view){
+        if(usernameInput == null || emailInput == null || passwordInput == null || passwordConfirmInput == null || usernameInput.getText().equals("") || emailInput.getText().equals("") || passwordInput.getText().equals("")){
+            Toast.makeText(RegistrationActivity.this, "Valamelyik adat hiányzik",Toast.LENGTH_LONG).show();
+            return;
+        }
         String username = usernameInput.getText().toString();
         String email = emailInput.getText().toString();
         String password = passwordInput.getText().toString();

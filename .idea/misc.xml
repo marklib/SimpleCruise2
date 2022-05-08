@@ -10,6 +10,15 @@
         <entry key="..\:/Users/markl/AndroidStudioProjects/SimpleCruise2/app/src/main/res/layout/activity_registration.xml" value="0.3625" />
         <entry key="..\:/Users/markl/AndroidStudioProjects/SimpleCruise2/app/src/main/res/layout/list_item.xml" value="0.29444444444444445" />
         <entry key="..\:/Users/markl/AndroidStudioProjects/SimpleCruise2/app/src/main/res/menu/cruise_list_menu.xml" value="0.18541666666666667" />
+        <entry key="app/src/main/res/layout-land/activity_registration.xml" value="0.2623456790123457" />
+        <entry key="app/src/main/res/layout/activity_check_cruises.xml" value="0.16458333333333333" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.24236755371093754" />
+        <entry key="app/src/main/res/layout/activity_my_cruises.xml" value="0.19610507246376813" />
+        <entry key="app/src/main/res/layout/activity_registration.xml" value="0.16458333333333333" />
+        <entry key="app/src/main/res/layout/list_item.xml" value="0.5359273274739583" />
+        <entry key="app/src/main/res/layout/list_itemMy.xml" value="0.30758883711220564" />
+        <entry key="app/src/main/res/layout/list_item_my.xml" value="0.19610507246376813" />
+        <entry key="app/src/main/res/menu/cruise_list_menu.xml" value="0.32454121907552086" />
       </map>
     </option>
   </component>

@@ -30,17 +30,6 @@
             android:text="@string/start"
             android:textColor="#000000" />
 
-        <Button
-            android:id="@+id/bookButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/image"
-            android:layout_alignParentBottom="true"
-            android:layout_marginTop="4dp"
-            android:layout_marginBottom="14dp"
-            android:onClick="onBook"
-            android:text="@string/book" />
-
         <TextView
             android:id="@+id/textView3"
             android:layout_width="wrap_content"
@@ -113,11 +102,31 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/dateText"
             android:layout_marginStart="5dp"
-            android:layout_marginTop="-2dp"
+            android:layout_marginTop="-4dp"
             android:layout_toEndOf="@+id/textView5"
             android:ems="10"
             android:inputType="number"
+            android:minHeight="48dp"
             android:text="1" />
+
+        <Button
+            android:id="@+id/deleteButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/updateButton"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="0dp"
+            android:layout_toEndOf="@+id/updateButton"
+            android:text="Törlés" />
+
+        <Button
+            android:id="@+id/updateButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/image"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="10dp"
+            android:text="Módosítás" />
 
     </RelativeLayout>
 </androidx.cardview.widget.CardView>

@@ -10,28 +10,23 @@ import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.AbsListView;
 import android.widget.SearchView;
 
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
-import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
 
-
-public class CheckCruisesActivity extends AppCompatActivity {
-
+public class MyCruisesActivity extends AppCompatActivity {
     private FirebaseUser user;
     private FirebaseAuth mAuth;
 
     private RecyclerView mRecyclerView;
     private ArrayList<CruiseItem> mItemList;
-    private CruiseItemAdapter mAdapter;
+    private MyCruiseItemAdapter mAdapter;
 
     private FirebaseFirestore mFirestore;
     private CollectionReference mItems;
@@ -41,22 +36,25 @@ public class CheckCruisesActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_check_cruises);
+        setContentView(R.layout.activity_my_cruises);
 
         user = FirebaseAuth.getInstance().getCurrentUser();
-        if(user == null){
+        if(user != null){
+            //
+        }
+        else{
             finish();
         }
 
-        mRecyclerView = findViewById(R.id.recyclerView);
+        mRecyclerView = findViewById(R.id.myRecyclerView);
         mRecyclerView.setLayoutManager(new GridLayoutManager(this, gridNumber));
         mItemList = new ArrayList<>();
 
-        mAdapter = new CruiseItemAdapter(this, mItemList);
+        mAdapter = new MyCruiseItemAdapter(this, mItemList);
         mRecyclerView.setAdapter(mAdapter);
 
         mFirestore = FirebaseFirestore.getInstance();
-        mItems = mFirestore.collection("Items");
+        mItems = mFirestore.collection("Bookings");
 
         queryData();
     }
@@ -64,16 +62,16 @@ public class CheckCruisesActivity extends AppCompatActivity {
     private void queryData(){
         mItemList.clear();
 
-        mItems.orderBy("start").limit(10).get().addOnSuccessListener(queryDocumentSnapshots -> {
+        mItems.orderBy("cruiseStart").whereEqualTo("userEmail", user.getEmail()).get().addOnSuccessListener(queryDocumentSnapshots -> {
             for(QueryDocumentSnapshot document : queryDocumentSnapshots){
                 CruiseItem item = document.toObject(CruiseItem.class);
                 mItemList.add(item);
             }
 
-            if(mItemList.size() == 0){
+            /*if(mItemList.size() == 0){
                 initalizeData();
                 queryData();
-            }
+            }*/
 
             mAdapter.notifyDataSetChanged();
         });
@@ -81,7 +79,7 @@ public class CheckCruisesActivity extends AppCompatActivity {
 
     }
 
-    private void initalizeData(){
+    /*private void initalizeData(){
         String[] itemsStart = getResources().getStringArray(R.array.cruise_item_starts);
         String[] itemsEnd = getResources().getStringArray(R.array.cruise_item_ends);
         String[] itemsDate = getResources().getStringArray(R.array.cruise_item_dates);
@@ -94,16 +92,16 @@ public class CheckCruisesActivity extends AppCompatActivity {
 
         itemsImageResource.recycle();
 
-    }
+    }*/
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
         super.onCreateOptionsMenu(menu);
         getMenuInflater().inflate(R.menu.cruise_list_menu, menu);
         MenuItem bookings = menu.findItem(R.id.bookings);
-        bookings.setTitle("Foglalások");
+        bookings.setTitle("Lehetőségek");
         MenuItem logout = menu.findItem(R.id.log_out);
-        logout.setVisible(true);
+        logout.setVisible(false);
         MenuItem menuItem = menu.findItem(R.id.search_bar);
         SearchView searchView = (SearchView) MenuItemCompat.getActionView(menuItem);
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
@@ -124,14 +122,9 @@ public class CheckCruisesActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item){
         switch (item.getItemId()){
-            case R.id.log_out:
-                mAuth.signOut();
-                finish();
-                return true;
 
             case R.id.bookings:
-                Intent intent = new Intent(this, MyCruisesActivity.class);
-                startActivity(intent);
+                finish();
                 return true;
 
             default:

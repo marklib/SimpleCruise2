@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SimpleCruise">
         <activity
+            android:name=".MyCruisesActivity"
+            android:exported="false" />
+        <activity
             android:name=".CheckCruisesActivity"
             android:exported="false" />
         <activity

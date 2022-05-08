@@ -37,6 +37,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void login(View view){
 
+        if (usernameInput == null || passwordInput == null || usernameInput.getText().equals("") || passwordInput.getText().equals("")){
+            Toast.makeText(MainActivity.this, "Valamelyik adat hiányzik", Toast.LENGTH_LONG).show();
+            return;
+        }
+
         String username = usernameInput.getText().toString();
         String password = passwordInput.getText().toString();
 
@@ -74,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    public void guestLogin(View view) {
+    /*public void guestLogin(View view) {
         mAuth.signInAnonymously().addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
@@ -86,5 +91,5 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-    }
+    }*/
 }
